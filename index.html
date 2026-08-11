@@ -1,5 +1,483 @@
-<html>
-  <body>
-    <h1>hello prasanna</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakshmi Prasanna | Student Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#3b82f6;
+    border-radius:50%;
+    filter:blur(180px);
+    top:-150px;
+    left:-150px;
+    opacity:.25;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#8b5cf6;
+    border-radius:50%;
+    filter:blur(180px);
+    bottom:-150px;
+    right:-150px;
+    opacity:.25;
+    z-index:-1;
+}
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:30px;
+    padding:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#60a5fa;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.glass{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 8px 32px rgba(0,0,0,0.35);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.2;
+}
+
+.hero-text span{
+    color:#60a5fa;
+}
+
+.hero-text p{
+    margin-top:20px;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.profile{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#8b5cf6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:80px;
+    font-weight:bold;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+    color:#60a5fa;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill-name{
+    margin-bottom:8px;
+}
+
+.bar{
+    height:10px;
+    background:rgba(255,255,255,0.1);
+    border-radius:20px;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+    background:linear-gradient(to right,#3b82f6,#8b5cf6);
+}
+
+.timeline{
+    border-left:3px solid #60a5fa;
+    padding-left:25px;
+}
+
+.timeline-item{
+    margin-bottom:30px;
+}
+
+.timeline-item h3{
+    color:#60a5fa;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:2.5rem;
+}
+
+.profile{
+    width:220px;
+    height:220px;
+    font-size:60px;
+}
+
+nav ul{
+    gap:15px;
+    font-size:14px;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero container" id="home">
+<div class="hero-content">
+
+<div class="hero-text">
+<h1>Hello, I'm <span>Lakshmi Prasanna</span></h1>
+<h2>Student Portfolio</h2>
+
+<p>
+Motivated university student passionate about technology,
+programming, data structures, sustainability, and problem-solving.
+I enjoy building practical software projects and continuously
+learning modern technologies.
+</p>
+
+<a href="#projects" class="btn">View My Projects</a>
+</div>
+
+<div class="profile">
+LP
+</div>
+
+</div>
+</section>
+
+<section class="container" id="about">
+<div class="glass">
+<h2 class="title">About Me</h2>
+
+<p style="line-height:2;">
+I am a university student with interests in software development,
+data structures, programming, and sustainable technologies.
+I enjoy transforming ideas into practical applications through coding
+and project development. My goal is to continuously improve my
+technical skills while contributing to innovative and impactful
+solutions.
+</p>
+
+</div>
+</section>
+
+<section class="container" id="education">
+<div class="glass">
+<h2 class="title">Education</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Sai University</h3>
+<p>Undergraduate Student</p>
+<p>Focused on computing, programming, analytical thinking, and project development.</p>
+</div>
+
+<div class="timeline-item">
+<h3>Academic Interests</h3>
+<p>Data Structures & Algorithms</p>
+<p>Web Development</p>
+<p>Software Engineering</p>
+<p>Sustainability & Environmental Studies</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="container" id="skills">
+<div class="glass">
+
+<h2 class="title">Skills</h2>
+
+<div class="skill">
+<div class="skill-name">C Programming</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Python</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">HTML & CSS</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Data Structures</div>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Problem Solving</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+</div>
+</section>
+
+<section class="container" id="projects">
+
+<div class="glass">
+
+<h2 class="title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>University Administration Hierarchy System</h3>
+<br>
+<p>
+Developed using C and Tree Data Structure with Child-Sibling Representation.
+Supports hierarchy creation, search, insertion, deletion, updates, validation,
+and staff management.
+</p>
+</div>
+
+<div class="card">
+<h3>Quiz Package</h3>
+<br>
+<p>
+Python installable package containing quiz modules, scoring system,
+question management, and reusable package structure.
+</p>
+</div>
+
+<div class="card">
+<h3>Student Portfolio Website</h3>
+<br>
+<p>
+Responsive portfolio website built using HTML, CSS, and JavaScript
+with modern glassmorphism UI design.
+</p>
+</div>
+
+<div class="card">
+<h3>Data Structures Practice Programs</h3>
+<br>
+<p>
+Implemented stacks, queues, linked lists, recursion problems,
+sorting algorithms, and searching techniques.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="container">
+
+<div class="glass">
+
+<h2 class="title">Achievements</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Programming Projects</h3>
+<p>Successfully completed multiple academic and practical coding projects.</p>
+</div>
+
+<div class="card">
+<h3>Data Structure Implementation</h3>
+<p>Implemented tree structures, stacks, queues, and linked lists in C.</p>
+</div>
+
+<div class="card">
+<h3>Continuous Learning</h3>
+<p>Actively learning modern development tools and technologies.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="container" id="contact">
+
+<div class="glass contact">
+
+<h2 class="title">Contact Me</h2>
+
+<p>📧 your-email@example.com</p>
+<p>💻 GitHub: github.com/yourusername</p>
+<p>🔗 LinkedIn: linkedin.com/in/yourprofile</p>
+
+<a href="#" class="btn">Download Resume</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Lakshmi Prasanna | Student Portfolio
+</footer>
+
+<script>
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+cards.forEach(card => {
+const top = card.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+card.style.opacity = "1";
+card.style.transform = "translateY(0)";
+}
+});
+});
+
+cards.forEach(card => {
+card.style.opacity = "0";
+card.style.transform = "translateY(40px)";
+card.style.transition = "all 0.7s ease";
+});
+</script>
+
+</body>
 </html>
